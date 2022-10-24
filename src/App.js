@@ -1,12 +1,9 @@
-import "./App.css";
-import MainNavigation from "./components/MainNavigation";
-import AboutMe from "./pages/AboutMe";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
     <div>
-      <MainNavigation />
-      <AboutMe />
+      <Portfolio />
     </div>
   );
 }

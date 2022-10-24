@@ -8,7 +8,7 @@ const About = () => {
       </div>
       <div className={classes.info}>
         <h3>
-          I'm a Informatic Engeneer with a great passion for creating websites
+          I'm a Informatic Engineer with a great passion for creating websites
         </h3>
       </div>
     </div>
