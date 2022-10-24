@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
+  --blue-darker: #01415b;
   --blue-dark: #015958;
   --blue-title: #008f8c;
   --blue-button: #0fc2c0;
@@ -8,6 +9,7 @@
 
 .home {
   height: 100vh;
+  width: 100%;
   display: table;
 }
 

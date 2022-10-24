@@ -5,7 +5,7 @@ const About = () => {
     <div className={classes.about}>
       <div className={classes.box}>
         <div>
-          <h3>About</h3>
+          <h2>About</h2>
         </div>
         <div className={classes.info}>
           <h3>
