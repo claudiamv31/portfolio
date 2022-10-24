@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+:root {
+  --blue-dark: #015958;
+  --blue-title: #008f8c;
+  --blue-button: #0fc2c0;
+}
+
 .home {
   height: 100vh;
   display: table;
@@ -22,14 +28,26 @@
   width: 50%;
   display: table-cell;
   vertical-align: middle;
-  text-align: center;
+  text-align: justify;
+  padding-right: 2rem;
 }
 
 .home-info h1 {
   font-family: "Poppins", sans-serif;
 }
 
+.home-info mark {
+  background-color: transparent;
+  color: var(--blue-title);
+}
+
 .home-info button {
   border: none;
-  background-color: #026773;
+  background-color: var(--blue-title);
+  width: 10rem;
+  height: 2.5rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
