@@ -1,15 +1,13 @@
-import About from "../components/About";
 import Home from "../components/Home";
-import Skills from "../components/Skills";
 import MainNavigation from "../components/MainNavigation";
+import AboutMe from "../components/AboutMe";
 
 const Portfolio = () => {
   return (
     <div>
       <MainNavigation />
       <Home />
-      <About />
-      <Skills />
+      <AboutMe />
     </div>
   );
 };
