@@ -1,0 +1,68 @@
+.wrapper {
+  display: table;
+  height: 100vh;
+  width: 100%;
+}
+
+.contact {
+  width: 50%;
+  display: table-cell;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  height: 100vh;
+  vertical-align: middle;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.box {
+  background-color: #a6bc09;
+  border-radius: 1rem;
+  height: 12.5rem;
+  padding: 0 2rem 0 2rem;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+.email {
+  background-color: var(--blue-dark);
+  display: inline-block;
+  padding: 0 0.5rem 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.email a {
+  color: white;
+  text-decoration: none;
+  font-size: 3.5vh;
+}
+
+.links {
+  width: 50%;
+  display: table-cell;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  height: 100vh;
+  vertical-align: middle;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.links h2 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.links-logo {
+  text-align: center;
+}
+
+.links-logo div {
+  display: inline-block;
+  width: 10rem;
+  height: 10rem;
+}
+
+.links-logo i {
+  color: var(--blue-darker);
+  width: 6rem;
+}
