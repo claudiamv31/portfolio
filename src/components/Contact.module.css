@@ -66,3 +66,8 @@
   color: var(--blue-darker);
   width: 6rem;
 }
+
+.links-logo a {
+  text-decoration: none;
+  color: black;
+}

@@ -22,12 +22,16 @@ const Contact = () => {
         <h2>Links</h2>
         <div className={classes["links-logo"]}>
           <div>
-            <i className="fa-brands fa-linkedin fa-5x"></i>
-            <h3>LinkedIn</h3>
+            <a href="https://github.com/claudiamv31">
+              <i className="fa-brands fa-linkedin fa-5x"></i>
+              <h3>LinkedIn</h3>
+            </a>
           </div>
           <div>
-            <i className="fa-brands fa-github fa-5x"></i>
-            <h3>Github</h3>
+            <a href="https://www.linkedin.com/in/claudia-mariana-vega-soto-102572211/">
+              <i className="fa-brands fa-github fa-5x"></i>
+              <h3>Github</h3>
+            </a>
           </div>
         </div>
       </div>
