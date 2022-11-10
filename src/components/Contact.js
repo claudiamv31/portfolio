@@ -2,7 +2,7 @@ import classes from "./Contact.module.css";
 
 const Contact = () => {
   return (
-    <div className={classes.wrapper}>
+    <div id="contact" className={classes.wrapper}>
       <div className={classes.contact}>
         <div className={classes.box}>
           <div>
@@ -19,7 +19,7 @@ const Contact = () => {
         </div>
       </div>
       <div className={classes.links}>
-        <h2>Links</h2>
+        <h2>You can also find me here</h2>
         <div className={classes["links-logo"]}>
           <div>
             <a href="https://github.com/claudiamv31">

@@ -11,7 +11,7 @@ const Home = () => {
         <h1>
           Hi, I'm <mark>Claudia Vega</mark> and I'm a Informatic Engineer
         </h1>
-        <button>Contact</button>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   );

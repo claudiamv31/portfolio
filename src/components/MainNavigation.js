@@ -6,9 +6,15 @@ const MainNavigation = () => {
       <div className={classes.logo}>Claudia</div>
       <nav className={classes.nav}>
         <ul>
-          <li>About</li>
-          <li>Portfolio</li>
-          <li>Contact</li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#porfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>

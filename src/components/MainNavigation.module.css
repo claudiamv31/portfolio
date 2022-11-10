@@ -14,6 +14,11 @@
   text-transform: uppercase;
 }
 
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
 .nav ul {
   list-style: none;
   display: flex;
@@ -25,4 +30,10 @@
   margin-left: 1.5rem;
   font-size: 1.5rem;
   font-family: "Dosis", sans-serif;
+}
+
+.nav a:active,
+.nav a:hover {
+  border-bottom: 0.2rem solid var(--blue-button);
+  padding-bottom: 5px;
 }

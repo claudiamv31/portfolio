@@ -43,13 +43,16 @@
   color: var(--blue-title);
 }
 
-.home-info button {
+.home-info a {
+  text-decoration: none;
+  padding: 0 0.5rem 0 0.5rem;
+  border-radius: 0.2rem;
   border: none;
   background-color: var(--blue-title);
   width: 10rem;
   height: 2.5rem;
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
