@@ -6,10 +6,10 @@ const Contact = () => {
       <div className={classes.contact}>
         <div className={classes.box}>
           <div>
-            <h2>Contact me</h2>
+            <h2>Cont&aacute;ctame</h2>
           </div>
           <div>
-            <h3>Feel free to contact me, I'd love to hear from you!</h3>
+            <h3>Me encantar&iacute;a escuchar de ti!</h3>
           </div>
           <div className={classes.email}>
             <a href="mailto:claudiavega3108@gmail.com">
@@ -19,7 +19,7 @@ const Contact = () => {
         </div>
       </div>
       <div className={classes.links}>
-        <h2>You can also find me here</h2>
+        <h2>Tambi&eacute;n me puedes encontrar aqu&iacute;</h2>
         <div className={classes["links-logo"]}>
           <div>
             <a href="https://github.com/claudiamv31">

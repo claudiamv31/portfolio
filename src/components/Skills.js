@@ -3,7 +3,7 @@ import classes from "./Skills.module.css";
 const Skills = () => {
   return (
     <div className={classes.skills}>
-      <h2>Skills</h2>
+      <h2>Habilidades</h2>
       <div className={classes["skills-logo"]}>
         <div>
           <i className="fa-brands fa-html5 fa-5x"></i>

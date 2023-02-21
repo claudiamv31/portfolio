@@ -9,9 +9,9 @@ const Home = () => {
       </div>
       <div className={classes["home-info"]}>
         <h1>
-          Hi, I'm <mark>Claudia Vega</mark> and I'm a Informatic Engineer
+          Hola, soy <mark>Claudia Vega</mark> y soy Ingeniera Inform&aacute;tica
         </h1>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Cont&aacute;ctame</a>
       </div>
     </div>
   );
