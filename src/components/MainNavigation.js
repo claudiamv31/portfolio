@@ -10,7 +10,7 @@ const MainNavigation = () => {
             <a href="#about">Acerca</a>
           </li>
           <li>
-            <a href="#porfolio">Portafolio</a>
+            <a href="#proyects">Proyectos</a>
           </li>
           <li>
             <a href="#contact">Contacto</a>

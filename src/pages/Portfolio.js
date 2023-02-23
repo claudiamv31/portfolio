@@ -2,6 +2,7 @@ import Home from "../components/Home";
 import MainNavigation from "../components/MainNavigation";
 import AboutMe from "../components/AboutMe";
 import Contact from "../components/Contact";
+import Proyects from "../components/Proyects";
 
 const Portfolio = () => {
   return (
@@ -9,6 +10,7 @@ const Portfolio = () => {
       <MainNavigation />
       <Home />
       <AboutMe />
+      <Proyects />
       <Contact />
     </div>
   );

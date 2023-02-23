@@ -1,0 +1,42 @@
+.proyects {
+  padding: 1rem;
+}
+
+.apps {
+  display: table;
+  margin: 0 auto;
+}
+
+.proyects h2 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.clavtv {
+  width: 30rem;
+  height: 30rem;
+}
+
+.clavtv a {
+  text-decoration: none;
+  color: black;
+}
+
+.clavtv img {
+  width: 30rem;
+  height: 20rem;
+}
+
+.clavtv h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+.clavtv h3 {
+  text-align: center;
+}
+
+.clavtv h4 {
+  text-align: justify;
+}
