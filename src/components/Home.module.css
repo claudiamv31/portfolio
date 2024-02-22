@@ -56,3 +56,49 @@
   font-size: 1.3rem;
   font-weight: 600;
 }
+
+@media screen and (max-width: 1120px) {
+  .home {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .home-img img {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 15vh;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .home-img img {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 15vh;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .home-img img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 15vh;
+  }
+
+  .home-info h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .home-info h1 {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .home-img img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 15vh;
+  }
+}
