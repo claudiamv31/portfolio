@@ -25,3 +25,16 @@
   color: var(--blue-darker);
   width: 6rem;
 }
+
+@media screen and (max-width: 550px) {
+  .skills-logo div {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .skills-logo i {
+    color: var(--blue-darker);
+    width: 5rem;
+  }
+}

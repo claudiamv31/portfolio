@@ -31,7 +31,7 @@
   display: table-cell;
   vertical-align: middle;
   text-align: justify;
-  padding-right: 2rem;
+  margin-right: 2rem;
 }
 
 .home-info h1 {
@@ -58,11 +58,6 @@
 }
 
 @media screen and (max-width: 1120px) {
-  .home {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
   .home-img img {
     width: 18rem;
     height: 18rem;
