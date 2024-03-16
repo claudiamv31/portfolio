@@ -3,3 +3,10 @@
   height: 100vh;
   width: 100%;
 }
+
+@media screen and (max-width: 550px) {
+  .about-me {
+    height: 80vh;
+    padding-top: 30%;
+  }
+}

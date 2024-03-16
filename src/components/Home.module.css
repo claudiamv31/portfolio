@@ -18,6 +18,7 @@
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  padding-left: 2%;
 }
 
 .home-img img {
@@ -31,7 +32,7 @@
   display: table-cell;
   vertical-align: middle;
   text-align: justify;
-  margin-right: 2rem;
+  padding-right: 3%;
 }
 
 .home-info h1 {
@@ -71,6 +72,10 @@
     height: 18rem;
     border-radius: 15vh;
   }
+
+  .home-info a {
+    margin-left: 11%;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -85,7 +90,11 @@
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 550px) {
+  .home {
+    height: 80vh;
+  }
+
   .home-info h1 {
     padding-left: 1rem;
     font-size: 1.5rem;

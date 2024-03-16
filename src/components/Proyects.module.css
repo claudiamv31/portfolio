@@ -42,7 +42,12 @@ h4 {
   text-align: justify;
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 550px) {
+  .proyects {
+    padding-top: 50%;
+    height: 80vh;
+  }
+
   .clavtv {
     width: 20rem;
     height: 10rem;
