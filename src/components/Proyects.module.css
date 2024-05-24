@@ -1,7 +1,6 @@
 .proyects {
   height: 100vh;
   width: 100%;
-  display: table;
 }
 
 .apps {
@@ -58,27 +57,37 @@ h4 {
 .pokeapp h4 {
   text-align: justify;
 }
+@media screen and (max-width: 1170px) {
+  .apps {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .proyects {
+    height: 140vh;
+  }
+}
 
 @media screen and (max-width: 550px) {
   .proyects {
     padding-top: 50%;
-    height: 80vh;
+    height: 30rem;
   }
 
   .clavtv,
   .pokeapp {
     width: 20rem;
-    height: 10rem;
+    height: 30rem;
   }
+
+  .proyects {
+    height: 150vh;
+  }
+
   .clavtv img,
   .pokeapp img {
     width: 20rem;
-    height: 20rem;
-  }
-}
-
-@media screen and (max-width: 1170px) {
-  .apps {
-    display: inline-block;
+    height: 15rem;
   }
 }
