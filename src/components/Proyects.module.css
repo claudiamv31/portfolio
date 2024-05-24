@@ -5,8 +5,13 @@
 }
 
 .apps {
-  display: table;
+  display: flex;
   margin: 0 auto;
+}
+
+.pokeapp {
+  padding-top: 5rem;
+  padding-bottom: 8rem;
 }
 
 .proyects h2 {
@@ -15,17 +20,21 @@
   padding-bottom: 1rem;
 }
 
-.clavtv {
+.clavtv,
+.pokeapp {
   width: 30rem;
   height: 30rem;
+  margin: auto;
 }
 
-.clavtv a {
+.clavtv a,
+.pokeapp a {
   text-decoration: none;
   color: black;
 }
 
-.clavtv img {
+.clavtv img,
+.pokeapp img {
   width: 30rem;
   height: 20rem;
 }
@@ -35,11 +44,18 @@ h4 {
   font-family: "Poppins", sans-serif;
 }
 
-.clavtv h3 {
+.pokeapp h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+.clavtv h3,
+.pokeapp h3 {
   text-align: center;
 }
 
-.clavtv h4 {
+.clavtv h4,
+.pokeapp h4 {
   text-align: justify;
 }
 
@@ -49,12 +65,20 @@ h4 {
     height: 80vh;
   }
 
-  .clavtv {
+  .clavtv,
+  .pokeapp {
     width: 20rem;
     height: 10rem;
   }
-  .clavtv img {
+  .clavtv img,
+  .pokeapp img {
     width: 20rem;
     height: 10rem;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .apps {
+    display: inline-block;
   }
 }
