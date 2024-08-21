@@ -7,13 +7,13 @@ const MainNavigation = () => {
       <nav className={classes.nav}>
         <ul>
           <li>
-            <a href="#about">Acerca</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#proyects">Proyectos</a>
+            <a href="#proyects">Proyects</a>
           </li>
           <li>
-            <a href="#contact">Contacto</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>

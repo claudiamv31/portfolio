@@ -26,15 +26,13 @@
   width: 6rem;
 }
 
-@media screen and (max-width: 550px) {
-  .skills-logo div {
-    display: inline-block;
-    width: 8rem;
-    height: 8rem;
-  }
+svg {
+  width: 80px;
+  height: 96px;
+}
 
-  .skills-logo i {
-    color: var(--blue-darker);
-    width: 5rem;
+@media screen and (max-width: 950px) {
+  .skills {
+    padding: 6rem 2rem 0 2rem;
   }
 }

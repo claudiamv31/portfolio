@@ -5,12 +5,14 @@ const About = () => {
     <div id="about" className={classes.about}>
       <div className={classes.box}>
         <div>
-          <h2>Acerca de mi</h2>
+          <h2>About me</h2>
         </div>
         <div className={classes.info}>
           <h3>
-            Soy una Ingeniera Inform&aacute;tica con un gran inter&eacute;s por
-            el desarrollo de p&aacute;ginas web.
+            I am a Computer Engineer deeply passionate about web development.
+            Always open and enthusiastic about new challenges, viewing them as
+            opportunities to learn and develop both personally and
+            professionally.
           </h3>
         </div>
       </div>

@@ -8,9 +8,7 @@ const Home = () => {
         <img src={img} alt="Claudia Vega" />
       </div>
       <div className={classes["home-info"]}>
-        <h1>
-          Hola, soy <mark>Claudia Vega</mark> y soy Ingeniera Inform&aacute;tica
-        </h1>
+        <h1>Hi, my name is Claudia Vega and I am an Informatic Engineer.</h1>
         <a href="#contact">Cont&aacute;ctame</a>
       </div>
     </div>

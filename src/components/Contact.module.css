@@ -2,6 +2,7 @@
   display: table;
   height: 100vh;
   width: 100%;
+  padding-top: 40vh;
 }
 
 .contact {
@@ -9,7 +10,6 @@
   display: table-cell;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  height: 100vh;
   vertical-align: middle;
   padding: 0 1.5rem 0 1.5rem;
 }
@@ -42,7 +42,6 @@
   display: table-cell;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  height: 100vh;
   vertical-align: middle;
   padding: 0 1.5rem 0 1.5rem;
 }
@@ -78,7 +77,7 @@
   }
 
   .links h2 {
-    font-size: 2.5vh;
+    font-size: 3vh;
   }
 
   .links h3 {
@@ -88,10 +87,6 @@
 
 @media screen and (max-width: 1900px) {
   .email a {
-    font-size: 2vh;
-  }
-
-  .links h2 {
     font-size: 2vh;
   }
 
@@ -108,7 +103,6 @@
   .links {
     display: table-row;
     text-align: center;
-    height: 50vh;
   }
 
   .links h3 {
@@ -118,16 +112,14 @@
   .contact {
     display: table-row;
     text-align: center;
-    height: 50vh;
   }
 
   .contact h2 {
-    font-size: 2.5vh;
+    font-size: 3vh;
   }
 
   .wrapper {
     height: 80vh;
-    padding-top: 4%;
   }
 
   .box {

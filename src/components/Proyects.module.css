@@ -1,6 +1,7 @@
 .proyects {
-  height: 100vh;
+  height: fit-content;
   width: 100%;
+  padding-top: 40vh;
 }
 
 .apps {
@@ -63,26 +64,17 @@ h4 {
     flex-direction: column;
     flex-wrap: wrap;
   }
-
-  .proyects {
-    height: 140vh;
-  }
 }
 
 @media screen and (max-width: 550px) {
   .proyects {
     padding-top: 50%;
-    height: 30rem;
   }
 
   .clavtv,
   .pokeapp {
     width: 20rem;
     height: 30rem;
-  }
-
-  .proyects {
-    height: 150vh;
   }
 
   .clavtv img,
