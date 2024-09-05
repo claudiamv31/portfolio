@@ -3,10 +3,10 @@ import classes from "./Proyects.module.css";
 import clavtvImg from "../assets/clavtv.png";
 import pokewiki from "../assets/pokewiki.png";
 
-const Proyects = () => {
+const Projects = () => {
   return (
     <div className={classes.proyects} id="proyects">
-      <h2>Proyects</h2>
+      <h2>Projects</h2>
       <div className={classes.apps}>
         <div className={classes.clavtv}>
           <a href="https://clautv.netlify.app">
@@ -35,4 +35,4 @@ const Proyects = () => {
   );
 };
 
-export default Proyects;
+export default Projects;

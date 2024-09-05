@@ -9,10 +9,9 @@ const About = () => {
         </div>
         <div className={classes.info}>
           <h3>
-            I am a Computer Engineer deeply passionate about web development.
-            Always open and enthusiastic about new challenges, viewing them as
-            opportunities to learn and develop both personally and
-            professionally.
+            I am a Computer Engineer with a deep passion for web development.
+            I’m always enthusiastic about new challenges, viewing them as
+            opportunities to grow both personally and professionally.
           </h3>
         </div>
       </div>
