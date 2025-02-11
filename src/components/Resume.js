@@ -10,11 +10,17 @@ const Resume = () => {
         </div>
         <div className={classes.resume}>
           <div className={classes.left}>
-            <iframe src="https://drive.google.com/file/d/1GdJwbnW8YUyMrNg8WM9C53raKkyMyqaj/preview"></iframe>
+            <iframe
+              src="https://drive.google.com/file/d/1GdJwbnW8YUyMrNg8WM9C53raKkyMyqaj/preview"
+              title="Resume in Spanish"
+            ></iframe>
             <h3>Resume in Spanish</h3>
           </div>
           <div className={classes.right}>
-            <iframe src="https://drive.google.com/file/d/1OcA_yAQcf28qbQaJ2RREURyepvVy4xK9/preview"></iframe>
+            <iframe
+              src="https://drive.google.com/file/d/1OcA_yAQcf28qbQaJ2RREURyepvVy4xK9/preview"
+              title="Resume in English"
+            ></iframe>
             <h3>Resume in English</h3>
           </div>
         </div>
