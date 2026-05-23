@@ -1,63 +1,137 @@
-import classes from "./Skills.module.css";
+import { useState } from 'react';
 
 const Skills = () => {
-  return (
-    <div className={classes.skills}>
-      <h2>Skills</h2>
-      <div className={classes["skills-logo"]}>
-        <div>
-          <i className="fa-brands fa-html5 fa-5x"></i>
-          <h3>HTML5</h3>
-        </div>
-        <div>
-          <i className="fa-brands fa-css3-alt fa-5x"></i>
-          <h3>CSS3</h3>
-        </div>
-        <div>
-          <svg
-            width="50px"
-            height="50px"
-            viewBox="0 0 32 32"
-            xmlns="http://www.w3.org/2000/svg"
-            className={classes.skillIcon}
-          >
-            <rect
-              x="2"
-              y="2"
-              width="28"
-              height="28"
-              rx="1.312"
-              fill="#01415b"
-            />
-            <path
-              d="M18.245,23.759v3.068a6.492,6.492,0,0,0,1.764.575,11.56,11.56,0,0,0,2.146.192,9.968,9.968,0,0,0,2.088-.211,5.11,5.11,0,0,0,1.735-.7,3.542,3.542,0,0,0,1.181-1.266,4.469,4.469,0,0,0,.186-3.394,3.409,3.409,0,0,0-.717-1.117,5.236,5.236,0,0,0-1.123-.877,12.027,12.027,0,0,0-1.477-.734q-.6-.249-1.08-.484a5.5,5.5,0,0,1-.813-.479,2.089,2.089,0,0,1-.516-.518,1.091,1.091,0,0,1-.181-.618,1.039,1.039,0,0,1,.162-.571,1.4,1.4,0,0,1,.459-.436,2.439,2.439,0,0,1,.726-.283,4.211,4.211,0,0,1,.956-.1,5.942,5.942,0,0,1,.808.058,6.292,6.292,0,0,1,.856.177,5.994,5.994,0,0,1,.836.3,4.657,4.657,0,0,1,.751.422V13.9a7.509,7.509,0,0,0-1.525-.4,12.426,12.426,0,0,0-1.9-.129,8.767,8.767,0,0,0-2.064.235,5.239,5.239,0,0,0-1.716.733,3.655,3.655,0,0,0-1.171,1.271,3.731,3.731,0,0,0-.431,1.845,3.588,3.588,0,0,0,.789,2.34,6,6,0,0,0,2.395,1.639q.63.26,1.175.509a6.458,6.458,0,0,1,.942.517,2.463,2.463,0,0,1,.626.585,1.2,1.2,0,0,1,.23.719,1.1,1.1,0,0,1-.144.552,1.269,1.269,0,0,1-.435.441,2.381,2.381,0,0,1-.726.292,4.377,4.377,0,0,1-1.018.105,5.773,5.773,0,0,1-1.969-.35A5.874,5.874,0,0,1,18.245,23.759Zm-5.154-7.638h4V13.594H5.938v2.527H9.92V27.375h3.171Z"
-              fill="#ffffff"
-              fillRule="evenodd"
-            />
-          </svg>
-          <h3>TypeScript</h3>
-        </div>
+  const [activeTab, setActiveTab] = useState('frontend');
 
-        <div>
-          <i className="fa-brands fa-react fa-5x"></i>
-          <h3>React/React Native</h3>
-        </div>
-        <div>
-          <svg viewBox="0 0 1343 1471.2">
-            <title>csharp</title>
-            <path
-              d="M653.3 1.3C641 3 630.5 5.9 619 10.7c-4.9 2.1-63.7 34.5-130.5 72.1l-182 102.3-153 86-99 56.5c-8.8 6.2-25.4 23-31.6 32.2-10 14.6-17.1 31.5-21.1 50-1.7 8.1-1.8 23-1.8 326l1.8 326c7.4 34.5 27.1 64.7 54.1 83 3.9 2.6 41.5 24.1 83.6 47.7l484 270.1c15.3 6 29.6 8.5 48 8.6 22 0 41.1-4.4 59.4-13.6 4.4-2.2 73.7-40.9 154-86l267.1-150 141-81.3c24.4-18.9 40.6-44.9 47.7-76.6l2.3-10.4V735.8l-1.8-326c-5.9-27.7-19-51.6-38.3-70-13.9-13.2 4.5-2.5-242.4-141.2L939 130.3 801.5 53 725 11.1c-11.5-5-23.1-8.1-36.2-9.8-13.5-1.8-22.3-1.8-35.5 0zm53.8 352c50.9 4.8 96.5 18.3 142 42 37.4 19.4 69.1 43.3 100.3 75.8 8.5 8.8 27.1 30.7 27.1 31.9 0 .8-8.3 5.8-43 25.8l-80.4 46.6-15.9 9.3-10.1-9.6c-17.6-16.6-35.5-29.2-55.2-39.1-41.5-20.7-87.1-28.2-132.4-21.6-24.4 3.5-44 9.7-67.6 21.4-66.1 32.7-110.8 94.5-122 169-2.4 15.9-2.4 46.4 0 62 7.4 48.3 27.6 89.5 61 124.7 26.9 28.4 68.2 52 107.7 61.7 67.3 16.4 138.2.6 192.9-43.1 4.1-3.3 11.6-9.8 16.6-14.6l9.1-8.6 10.4 6.1 80.9 46.8 46.9 27.5c2.1 2-10.8 17.5-33.4 40-33.4 33.4-63.7 55.1-104 74.6-39.6 19-79 30.3-126.5 36.1-14 1.7-65.9 1.7-80.5 0-90.8-10.8-170.1-49.2-232.7-112.8-42.7-43.5-71.3-89.7-90.8-146.9-26.6-78.3-26.7-165.7-.2-244.5C345.5 500.3 434.7 410.7 548 372.1c25.6-8.7 57.8-15.8 83-18.2l14.5-1.4c10.4-1 47.5-.5 61.6.8zm348.4 254.5v32h32 32v-32-32h32 32v32 32h32 32v32 32h-32-32v32 32h32 32v32 32h-32-32v32 32h-32-32v-32-32h-32-32v32 32h-32-32v-32-32h-32-32v-32-32h32 32v-32-32h-32-32v-32-32h32 32v-32-32h32 32v32zm0 128v32h32 32v-32-32h-32-32v32z"
-              fill="#01415b"
-            ></path>
-          </svg>
-          <h3>C#</h3>
-        </div>
-        <div>
-          <i className="fa-brands fa-docker fa-5x"></i>
-          <h3>Docker</h3>
+  const categories = [
+    {
+      id: 'frontend',
+      label: 'Frontend',
+      icon: 'layers',
+      description: 'I focus on building responsive, modular user interfaces with strict type-safety, clean state management, and smooth transitions.',
+      skills: ['React', 'React Native', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3']
+    },
+    {
+      id: 'backend',
+      label: 'Backend Dev',
+      icon: 'code',
+      description: 'Designing RESTful web services, solid routing architectures, and scalable business logic using Microsoft technologies and modern Node runtimes.',
+      skills: ['.NET', 'C#', 'REST APIs', 'Node.js']
+    },
+    {
+      id: 'database',
+      label: 'Database',
+      icon: 'database',
+      description: 'Structuring normalized relational schemas, writing high-performance queries, and applying indexing strategies to handle heavy transactions.',
+      skills: ['SQL Server', 'MySQL', 'Query Optimization', 'Relational Design']
+    },
+    {
+      id: 'infrastructure',
+      label: 'Infrastructure & Tools',
+      icon: 'terminal',
+      description: 'Orchestrating multi-container environments, setting up reverse proxies, and maintaining test environments.',
+      skills: ['Docker', 'Nginx', 'Git', 'Postman']
+    },
+    {
+      id: 'qa',
+      label: 'Quality Assurance',
+      icon: 'fact_check',
+      description: 'My native advantage. I design comprehensive test plans, write end-to-end regression scripts, and perform rigorous validation.',
+      skills: ['Automated Scripts', 'API Testing', 'Regression Testing', 'Manual Testing']
+    }
+  ];
+
+  const activeCategory = categories.find(cat => cat.id === activeTab) || categories[0];
+
+  return (
+    <section className="bg-surface-container-low py-16 md:py-24 border-t border-b border-outline/10" id="competencies">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+          
+          {/* Left Column - Context */}
+          <div className="lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <span className="font-label-md text-label-sm md:text-label-md text-secondary uppercase tracking-[0.2em] block mb-4">
+                Technical Stack
+              </span>
+              <h2 className="font-headline-md text-3xl md:text-headline-md text-on-surface mb-6">
+                Core Competencies
+              </h2>
+              <p className="font-body-lg text-body-md md:text-body-lg text-secondary leading-relaxed mb-8 max-w-md">
+                A modern technical stack reinforced by a testing-first engineering mindset. Every technology is applied with rigorous error boundaries, efficiency, and architectural structure in mind.
+              </p>
+            </div>
+            
+            <div className="hidden lg:block bg-primary-fixed text-on-primary-fixed-variant p-6 rounded-xl border border-primary/10">
+              <span className="material-symbols-outlined text-primary text-3xl mb-3">verified</span>
+              <h4 className="font-headline-sm text-lg font-medium text-on-primary-fixed mb-2">
+                The QA-to-Developer Advantage
+              </h4>
+              <p className="font-body-md text-sm text-secondary leading-relaxed">
+                By understanding how code breaks from a QA perspective, I write developer code that is resilient to edge cases and race conditions by default.
+              </p>
+            </div>
+          </div>
+          
+          {/* Right Column - Interactive Explorer */}
+          <div className="lg:col-span-7 bg-surface p-6 md:p-8 rounded-2xl border border-outline/10 shadow-sm flex flex-col md:flex-row gap-gutter">
+            
+            {/* Vertical Menu Tabs */}
+            <div className="flex md:flex-col overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 gap-2 md:w-1/3 border-b md:border-b-0 md:border-r border-outline/10">
+              {categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveTab(cat.id)}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all duration-200 shrink-0 ${
+                    activeTab === cat.id
+                      ? 'bg-primary-fixed text-primary font-bold shadow-xs'
+                      : 'text-secondary hover:text-on-surface hover:bg-surface-container-low'
+                  }`}
+                >
+                  <span className="material-symbols-outlined text-xl">{cat.icon}</span>
+                  <span className="font-label-md text-sm">{cat.label}</span>
+                </button>
+              ))}
+            </div>
+            
+            {/* Display Panel */}
+            <div className="md:w-2/3 flex flex-col justify-between pt-4 md:pt-0 md:pl-6 min-h-[250px]">
+              <div className="animate-fadeIn">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="material-symbols-outlined text-primary bg-primary-fixed p-2.5 rounded-lg text-2xl">
+                    {activeCategory.icon}
+                  </span>
+                  <h3 className="font-headline-sm text-headline-sm text-on-surface">
+                    {activeCategory.label}
+                  </h3>
+                </div>
+                <p className="font-body-md text-secondary leading-relaxed mb-6">
+                  {activeCategory.description}
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="font-label-md text-xs text-secondary uppercase tracking-widest mb-3">
+                  Key Technologies & Tools
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {activeCategory.skills.map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="bg-surface-container hover:bg-surface-container-high text-primary hover:text-on-surface px-4 py-2 text-sm rounded-lg font-medium border border-outline/10 transition-colors cursor-default"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
