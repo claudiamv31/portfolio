@@ -1,4 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;500;600&family=Metropolis:wght@400;500;600&display=swap');
+
 body {
-  margin: 0;
-  padding: 0;
+  background-color: #faf9f7;
+  color: #1a1c1b;
+  scroll-behavior: smooth;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  vertical-align: middle;
+}
+.heatmap-cell {
+  aspect-ratio: 1/1;
+  transition: transform 0.2s ease;
+}
+.heatmap-cell:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+.gallery-card {
+  transition: background-color 0.3s ease;
+}
+.gallery-card:hover {
+  background-color: #efeeec;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #faf9f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #475b4c;
+  border-radius: 4px;
 }
