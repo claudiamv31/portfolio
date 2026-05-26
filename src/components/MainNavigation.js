@@ -4,7 +4,7 @@ const MainNavigation = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const sections = ['home', 'competencies', 'projects', 'contact'];
+    const sections = ['home', 'resume', 'projects', 'contact'];
     const observerOptions = {
       root: null,
       rootMargin: '-50% 0px -50% 0px',
@@ -46,7 +46,7 @@ const MainNavigation = () => {
           <a className={getLinkClassName('home')} href="#home">
             Home
           </a>
-          <a className={getLinkClassName('competencies')} href="#competencies">
+          <a className={getLinkClassName('resume')} href="#resume">
             CV
           </a>
           <a className={getLinkClassName('projects')} href="#projects">

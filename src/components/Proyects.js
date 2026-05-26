@@ -19,153 +19,333 @@ const Projects = () => {
       number: '01',
       category: 'DOCUMENT PROCESSING & OPTIMIZATION',
       title: 'High-Performance SAT XML Invoice Processor',
-      subtitle: 'Dynamic resource-aware PDF document generator service.',
-      description: 'Engineered a mission-critical service designed to parse Mexican Tax Authority (SAT) XML invoices (CFDI) and compile them into standardized PDF documents under heavy concurrent loads.',
-      tech: ['.NET Core', 'C#', 'QuestPDF', 'iTextSharp', 'XML/CFDI'],
-      challenge: 'Heavy multi-page XMLs (with thousands of transaction lines) caused garbage collector spikes and memory exhaustion when rendering layouts, leading to container crashes.',
-      complexity: 'Designed a dynamic layout router. The service pre-parses XML structures to measure item density and reads process memory limits. It dynamically switches between memory-streamed iTextSharp for heavy data grids and QuestPDF for visually complex, layout-driven invoices, optimizing memory utilization by 65%.',
-      solution: 'Implemented parallelized chunk-processing and custom memory buffers. Reduced average rendering time by 40% and eliminated all Out-Of-Memory (OOM) exceptions in production.',
+      subtitle: 'Optimized XML-to-PDF generation engine using FastReport.',
+      description:
+        'Engineered a high-efficiency document service that parses Mexican Tax Authority (SAT) XML invoices and compiles them into standardized PDFs. By refactoring the data extraction and layout mapping pipeline, the new service cuts document generation time by 50% compared to the legacy system.',
+      tech: ['.NET Core', 'C#', 'XML/CFDI', 'FastReport', 'Optimization'],
+      challenge:
+        'The legacy document generation system was slow and resource-heavy, causing bottlenecks and delays when compiling multi-page XML invoices with extensive transaction lists during peak billing periods.',
+      complexity:
+        'Streamlined the entire data pipeline into a lightweight, linear architecture. Developed a clean traversal engine in C# that reads the XML structure, extracts the required financial data node by node, maps and formats the information directly into FastReport templates, and outputs the structured .fr3 file to render the final PDF instantly.',
+      solution:
+        'Halved the document generation time (50% speed increase) across the platform, eliminated processing queues, and drastically improved the user experience during massive payroll or invoicing cycles.',
       svg: (
-        <svg viewBox="0 0 400 250" className="w-full h-full bg-[#efeeec] text-primary p-4 rounded-xl border border-outline/10">
-          <rect x="20" y="20" width="100" height="40" rx="8" fill="#475b4c" />
-          <text x="70" y="45" fill="white" fontStyle="bold" fontSize="12" textAnchor="middle">SAT XML Input</text>
-          
-          <path d="M 120 40 L 170 40" stroke="#475b4c" strokeWidth="2" fill="none" markerEnd="url(#arrow)" />
-          
-          <rect x="170" y="20" width="120" height="80" rx="8" fill="white" stroke="#475b4c" strokeWidth="2" />
-          <text x="230" y="45" fill="#1a1c1b" fontSize="10" fontWeight="bold" textAnchor="middle">Complexity Scanner</text>
-          <text x="230" y="65" fill="#5e5f5c" fontSize="8" textAnchor="middle">Check nodes & memory</text>
-          <text x="230" y="82" fill="#475b4c" fontSize="9" fontWeight="bold" textAnchor="middle">RAM &lt; 200MB ?</text>
-          
-          <path d="M 230 100 L 230 150" stroke="#475b4c" strokeWidth="2" strokeDasharray="4" fill="none" />
-          
-          {/* Path 1: QuestPDF */}
-          <path d="M 290 60 L 320 60 L 320 150" stroke="#475b4c" strokeWidth="2" fill="none" />
-          <rect x="280" y="150" width="100" height="40" rx="8" fill="white" stroke="#475b4c" strokeWidth="2" />
-          <text x="330" y="175" fill="#1a1c1b" fontSize="10" fontWeight="bold" textAnchor="middle">QuestPDF Path</text>
-          <text x="330" y="190" fill="#5e5f5c" fontSize="8" textAnchor="middle">(Complex Layout)</text>
-
-          {/* Path 2: iTextSharp */}
-          <rect x="180" y="150" width="100" height="40" rx="8" fill="white" stroke="#475b4c" strokeWidth="2" />
-          <text x="230" y="175" fill="#1a1c1b" fontSize="10" fontWeight="bold" textAnchor="middle">iText Stream</text>
-          <text x="230" y="190" fill="#5e5f5c" fontSize="8" textAnchor="middle">(Heavy Grid Data)</text>
-          
-          <path d="M 230 190 L 230 220 L 150 220" stroke="#475b4c" strokeWidth="2" fill="none" />
-          <path d="M 330 190 L 330 220 L 250 220" stroke="#475b4c" strokeWidth="2" fill="none" />
-          
-          <rect x="70" y="200" width="80" height="35" rx="8" fill="#475b4c" />
-          <text x="110" y="222" fill="white" fontSize="10" textAnchor="middle">PDF Output</text>
-          
+        <svg
+          viewBox="0 0 400 250"
+          className="w-full h-full bg-[#efeeec] text-primary p-4 rounded-xl border border-outline/10"
+        >
+          {/* Definición de la flecha */}
           <defs>
-            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 0 0 L 10 5 L 0 10 z" fill="#475b4c" />
+            <marker
+              id="arrow"
+              viewBox="0 0 10 10"
+              refX="6"
+              refY="5"
+              markerWidth="6"
+              markerHeight="6"
+              orient="auto-start-reverse"
+            >
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#475b4c" />
             </marker>
           </defs>
-        </svg>
-      )
-    },
-    {
-      id: 'imss-payroll',
-      number: '02',
-      category: 'GOVERNMENT INTEGRATION & BUSINESS LOGIC',
-      title: 'Enterprise Payroll & IMSS Government Portal Integration',
-      subtitle: 'Modernizing legacy payroll compliance to cloud modules.',
-      description: 'Redesigned legacy desktop payroll modules into modern web tools, building integrations for worker movement notifications (hires, layoffs, wage shifts) matching the IMSS (IDSE) DISPMAG government layout.',
-      tech: ['.NET Framework', 'C#', 'SQL Server', 'React', 'Entity Framework'],
-      challenge: 'The IDSE government portal utilizes a rigid, legacy, position-based text file layout (DISPMAG). An offset of a single character rejected the entire batch upload of worker movements.',
-      complexity: 'Engineered a declarative validation and formatting schema engine in C# that maps C# properties to fixed-width string segments. Developed optimized SQL procedures with composite indexes and CTEs to execute massive historical calculations and generate error-free files.',
-      solution: 'Replaced hours of manual error correction with a 1-click batch builder. Reduced government portal validation errors to absolute zero and accelerated report generation from 45 seconds to less than 3 seconds.',
-      svg: (
-        <svg viewBox="0 0 400 250" className="w-full h-full bg-[#efeeec] text-primary p-4 rounded-xl border border-outline/10">
-          <rect x="20" y="30" width="90" height="40" rx="6" fill="white" stroke="#475b4c" strokeWidth="2" />
-          <text x="65" y="55" fill="#1a1c1b" fontSize="10" fontWeight="bold" textAnchor="middle">SQL DB (Payroll)</text>
-          
-          <path d="M 110 50 L 160 50" stroke="#475b4c" strokeWidth="2" markerEnd="url(#arrow)" fill="none" />
-          
-          <rect x="160" y="20" width="120" height="90" rx="8" fill="#475b4c" />
-          <text x="220" y="45" fill="white" fontSize="10" fontWeight="bold" textAnchor="middle">DISPMAG Builder</text>
-          <text x="220" y="65" fill="#d1e8d5" fontSize="8" textAnchor="middle">- Fixed-width mappings</text>
-          <text x="220" y="80" fill="#d1e8d5" fontSize="8" textAnchor="middle">- Space-padding logic</text>
-          <text x="220" y="95" fill="#d1e8d5" fontSize="8" textAnchor="middle">- Modulo 11 check</text>
-          
-          <path d="M 280 65 L 320 65 L 320 150" stroke="#475b4c" strokeWidth="2" fill="none" />
-          
-          <rect x="270" y="150" width="110" height="50" rx="6" fill="white" stroke="#475b4c" strokeWidth="2" />
-          <text x="325" y="170" fill="#1a1c1b" fontSize="9" fontWeight="bold" textAnchor="middle">IDSE DISPMAG File</text>
-          <text x="325" y="185" fill="#ba1a1a" fontSize="8" fontStyle="italic" textAnchor="middle">["001235489874   ..."]</text>
-          
-          <path d="M 325 200 L 325 225 L 250 225" stroke="#475b4c" strokeWidth="2" fill="none" />
-          
-          <rect x="140" y="205" width="110" height="35" rx="6" fill="#475b4c" />
-          <text x="195" y="226" fill="white" fontSize="10" textAnchor="middle">IDSE Portal Success</text>
-        </svg>
-      )
-    },
-    {
-      id: 'docker-app',
-      number: '03',
-      category: 'CONTAINERIZED ARCHITECTURE & SECURITY',
-      title: 'Containerized Full-Stack Architecture',
-      subtitle: 'Multi-service tracker orchestrated inside isolated Docker containers.',
-      description: 'Architected and deployed a multi-tier tracking system, bundling React frontend, .NET 8 Web API backend, and a PostgreSQL database in structured Docker containers.',
-      tech: ['.NET 8', 'React', 'PostgreSQL', 'Docker Compose', 'JWT', 'UUIDv7'],
-      challenge: 'Ensuring seamless local environment orchestration, protecting database queries against performance drops as tables scale, and designing a secure authentication cycle.',
-      complexity: 'Configured a multi-stage Docker build pipeline for optimized images. Adopted time-ordered UUIDv7 as primary database keys to maintain indexing performance under high insert rates. Engineered JWT auth flows utilizing secure HttpOnly cookies, protecting against XSS/CSRF.',
-      solution: 'Enabled single-command deployment with uniform local/production configurations. Standardized clean separation of concerns using C# DbContext patterns.',
-      svg: (
-        <svg viewBox="0 0 400 250" className="w-full h-full bg-[#efeeec] text-primary p-4 rounded-xl border border-outline/10">
-          <rect x="10" y="10" width="380" height="230" rx="10" fill="none" stroke="#475b4c" strokeWidth="2" strokeDasharray="6" />
-          <text x="25" y="28" fill="#475b4c" fontSize="10" fontWeight="bold">Docker Compose Network</text>
-          
-          {/* Container 1 */}
-          <rect x="30" y="60" width="90" height="120" rx="8" fill="white" stroke="#475b4c" strokeWidth="2" />
-          <text x="75" y="90" fill="#1a1c1b" fontSize="12" fontWeight="bold" textAnchor="middle">React SPA</text>
-          <text x="75" y="110" fill="#5e5f5c" fontSize="9" textAnchor="middle">Vite / HTML / CSS</text>
-          
-          <path d="M 120 120 L 160 120" stroke="#475b4c" strokeWidth="2" markerEnd="url(#arrow)" fill="none" />
-          
-          {/* Container 2 */}
-          <rect x="160" y="60" width="100" height="120" rx="8" fill="#475b4c" />
-          <text x="210" y="90" fill="white" fontSize="11" fontWeight="bold" textAnchor="middle">.NET 8 API</text>
-          <text x="210" y="110" fill="#d1e8d5" fontSize="8" textAnchor="middle">JWT Handlers</text>
-          <text x="210" y="125" fill="#d1e8d5" fontSize="8" textAnchor="middle">Entity Framework</text>
-          <text x="210" y="140" fill="#d1e8d5" fontSize="8" textAnchor="middle">UUIDv7 Logic</text>
 
-          <path d="M 260 120 L 290 120" stroke="#475b4c" strokeWidth="2" markerEnd="url(#arrow)" fill="none" />
-          
-          {/* Container 3 */}
-          <rect x="290" y="60" width="80" height="120" rx="8" fill="white" stroke="#475b4c" strokeWidth="2" />
-          <text x="330" y="90" fill="#1a1c1b" fontSize="11" fontWeight="bold" textAnchor="middle">PostgreSQL</text>
-          <text x="330" y="110" fill="#5e5f5c" fontSize="9" textAnchor="middle">Stored Procs</text>
-          <text x="330" y="125" fill="#5e5f5c" fontSize="8" textAnchor="middle">UUIDv7 Index</text>
+          {/* Bloque 1: Lectura XML */}
+          <rect x="20" y="30" width="100" height="40" rx="6" fill="#475b4c" />
+          <text x="70" y="54" fill="white" fontWeight="bold" fontSize="10" textAnchor="middle">
+            1. Read SAT XML
+          </text>
+          <text x="70" y="65" fill="#d1e8d5" fontSize="7" textAnchor="middle">
+            Load Invoice File
+          </text>
+
+          {/* Flecha 1 -> 2 */}
+          <line
+            x1="120"
+            y1="50"
+            x2="142"
+            y2="50"
+            stroke="#475b4c"
+            strokeWidth="2"
+            markerEnd="url(#arrow)"
+          />
+
+          {/* Bloque 2: Recorrer Nodos */}
+          <rect
+            x="150"
+            y="30"
+            width="100"
+            height="40"
+            rx="6"
+            fill="white"
+            stroke="#475b4c"
+            strokeWidth="2"
+          />
+          <text x="200" y="54" fill="#1a1c1b" fontSize="10" fontWeight="bold" textAnchor="middle">
+            2. Node Traversal
+          </text>
+          <text x="200" y="65" fill="#5e5f5c" fontSize="7" textAnchor="middle">
+            Extract Data Keys
+          </text>
+
+          {/* Flecha 2 -> 3 (Baja y va a la izquierda) */}
+          <line x1="200" y1="70" x2="200" y2="105" stroke="#475b4c" strokeWidth="2" />
+          <line x1="200" y1="105" x2="70" y2="105" stroke="#475b4c" strokeWidth="2" />
+          <line
+            x1="70"
+            y1="105"
+            x2="70"
+            y2="122"
+            stroke="#475b4c"
+            strokeWidth="2"
+            markerEnd="url(#arrow)"
+          />
+
+          {/* Bloque 3: Recabar y Formatear */}
+          <rect
+            x="20"
+            y="130"
+            width="100"
+            height="40"
+            rx="6"
+            fill="white"
+            stroke="#475b4c"
+            strokeWidth="2"
+          />
+          <text x="70" y="154" fill="#1a1c1b" fontSize="10" fontWeight="bold" textAnchor="middle">
+            3. Data Mapping
+          </text>
+          <text x="70" y="165" fill="#5e5f5c" fontSize="7" textAnchor="middle">
+            Format for Template
+          </text>
+
+          {/* Flecha 3 -> 4 */}
+          <line
+            x1="120"
+            y1="150"
+            x2="142"
+            y2="150"
+            stroke="#475b4c"
+            strokeWidth="2"
+            markerEnd="url(#arrow)"
+          />
+
+          {/* Bloque 4: Estructura FastReport (.fr3) */}
+          <rect x="150" y="130" width="100" height="40" rx="6" fill="#475b4c" />
+          <text x="200" y="154" fill="white" fontWeight="bold" fontSize="10" textAnchor="middle">
+            4. FR3 Template
+          </text>
+          <text x="200" y="165" fill="#d1e8d5" fontSize="7" textAnchor="middle">
+            Generate Layout Data
+          </text>
+
+          {/* Flecha 4 -> Salida Final */}
+          <line
+            x1="250"
+            y1="150"
+            x2="272"
+            y2="150"
+            stroke="#475b4c"
+            strokeWidth="2"
+            markerEnd="url(#arrow)"
+          />
+
+          {/* Bloque Final: PDF Listo */}
+          <rect
+            x="280"
+            y="125"
+            width="100"
+            height="50"
+            rx="6"
+            fill="white"
+            stroke="#ba1a1a"
+            strokeWidth="1.5"
+          />
+          <text x="330" y="148" fill="#1a1c1b" fontSize="10" fontWeight="bold" textAnchor="middle">
+            Final PDF Output
+          </text>
+          <text x="330" y="162" fill="#ba1a1a" fontSize="8" fontWeight="bold" textAnchor="middle">
+            ⚡ 50% Faster Performance
+          </text>
         </svg>
-      )
-    }
+      ),
+    },
+    {
+      id: 'payroll-modules',
+      number: '02',
+      category: 'FULL-STACK INTEGRATION & DATABASE OPTIMIZATION',
+      title: 'Enterprise Payroll & Business Module Modernization',
+      subtitle: 'Migrating desktop core features into secure, high-performance web tools.',
+      description:
+        'Collaborated on modernizing legacy desktop business and payroll functionality into responsive web modules, successfully integrating React frontends with secure .NET/C# REST APIs and optimized SQL Server databases.',
+      tech: ['React', '.NET', 'C#', 'SQL Server', 'REST APIs'],
+      challenge:
+        'Legacy application logic required users to depend on isolated desktop environments, creating challenges for remote operations and causing slow data rendering when processing extensive payroll calculation histories.',
+      complexity:
+        'Engineered reusable, state-managed React components for the user interface and built robust backend API controllers in C# to handle secure business logic pipelines. Wrote and optimized complex SQL Server queries, using indexing and execution analysis to ensure high-speed data validation and accurate financial calculations.',
+      solution:
+        'Successfully transitioned core business features into modern web services, eliminating environment dependencies, streamlining internal processes, and drastically reducing data validation and query response times.',
+      svg: (
+        <svg
+          viewBox="0 0 400 250"
+          className="w-full h-full bg-[#efeeec] text-primary p-4 rounded-xl border border-outline/10"
+        >
+          {/* Definición de la flecha */}
+          <defs>
+            <marker
+              id="arrow2"
+              viewBox="0 0 10 10"
+              refX="6"
+              refY="5"
+              markerWidth="6"
+              markerHeight="6"
+              orient="auto-start-reverse"
+            >
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#475b4c" />
+            </marker>
+          </defs>
+
+          {/* Bloque 1: React Frontend (Izquierda) */}
+          <rect x="15" y="45" width="95" height="50" rx="6" fill="#475b4c" />
+          <text x="62" y="70" fill="white" fontWeight="bold" fontSize="10" textAnchor="middle">
+            React Frontend
+          </text>
+          <text x="62" y="83" fill="#d1e8d5" fontSize="8" textAnchor="middle">
+            UI Modules
+          </text>
+
+          {/* Flecha Frontend -> API Backend */}
+          <line
+            x1="110"
+            y1="70"
+            x2="137"
+            y2="70"
+            stroke="#475b4c"
+            strokeWidth="2"
+            markerEnd="url(#arrow2)"
+          />
+
+          {/* Bloque 2: API .NET / C# (Centro) */}
+          <rect
+            x="145"
+            y="35"
+            width="110"
+            height="70"
+            rx="6"
+            fill="white"
+            stroke="#475b4c"
+            strokeWidth="2"
+          />
+          <text x="200" y="57" fill="#1a1c1b" fontSize="10" fontWeight="bold" textAnchor="middle">
+            .NET / C# API
+          </text>
+          <text x="200" y="73" fill="#5e5f5c" fontSize="8" textAnchor="middle">
+            REST Endpoints
+          </text>
+          <text x="200" y="86" fill="#5e5f5c" fontSize="8" textAnchor="middle">
+            Controllers
+          </text>
+
+          {/* Flecha API Backend -> SQL Server */}
+          <line
+            x1="255"
+            y1="70"
+            x2="282"
+            y2="70"
+            stroke="#475b4c"
+            strokeWidth="2"
+            markerEnd="url(#arrow2)"
+          />
+
+          {/* Bloque 3: Base de Datos SQL (Derecha) */}
+          <rect x="290" y="45" width="95" height="50" rx="6" fill="#475b4c" />
+          <text x="337" y="70" fill="white" fontWeight="bold" fontSize="10" textAnchor="middle">
+            SQL Server
+          </text>
+          <text x="337" y="83" fill="#d1e8d5" fontSize="8" textAnchor="middle">
+            Optimized Queries
+          </text>
+
+          {/* Flujo de regreso inferior para la Validación de Datos */}
+          {/* Línea hacia abajo desde SQL */}
+          <line x1="337" y1="95" x2="337" y2="155" stroke="#475b4c" strokeWidth="2" />
+          {/* Línea horizontal hacia la izquierda */}
+          <line
+            x1="337"
+            y1="155"
+            x2="262"
+            y2="155"
+            stroke="#475b4c"
+            strokeWidth="2"
+            markerEnd="url(#arrow2)"
+          />
+
+          {/* Bloque 4: Motor de Validación de Datos */}
+          <rect
+            x="135"
+            y="130"
+            width="120"
+            height="50"
+            rx="6"
+            fill="white"
+            stroke="#ba1a1a"
+            strokeWidth="1.5"
+          />
+          <text x="195" y="152" fill="#1a1c1b" fontSize="9" fontWeight="bold" textAnchor="middle">
+            Data Validation Flow
+          </text>
+          <text x="195" y="167" fill="#ba1a1a" fontSize="8" textAnchor="middle">
+            Accurate Calculations
+          </text>
+
+          {/* Línea de retorno desde Validación hacia el Frontend */}
+          <line
+            x1="135"
+            y1="155"
+            x2="62"
+            y2="155"
+            stroke="#475b4c"
+            strokeWidth="1.5"
+            strokeDasharray="3"
+          />
+          <line
+            x1="62"
+            y1="155"
+            x2="62"
+            y2="103"
+            stroke="#475b4c"
+            strokeWidth="1.5"
+            strokeDasharray="3"
+            markerEnd="url(#arrow2)"
+          />
+        </svg>
+      ),
+    },
   ];
 
   const personalProjects = [
     {
       id: 'clavtv',
       title: 'ClavTV Show Explorer',
-      description: 'An interactive streaming encyclopedia and show discovery web portal that updates trending catalogs and allows users to search for matching series.',
+      description:
+        'An interactive streaming encyclopedia and show discovery web portal that updates trending catalogs and allows users to search for matching series.',
       tech: ['React', 'JavaScript', 'HTML5', 'CSS3', 'TMDB API'],
       image: clavtvImg,
-      link: 'https://clautv.netlify.app'
+      link: 'https://clautv.netlify.app',
     },
     {
       id: 'pokeapp',
       title: 'PokeApp Wiki Directory',
-      description: 'A comprehensive Pokémon catalog displaying creature stats, elements, regional profiles, and an interactive favorite bookmarks manager.',
+      description:
+        'A comprehensive Pokémon catalog displaying creature stats, elements, regional profiles, and an interactive favorite bookmarks manager.',
       tech: ['React', 'JavaScript', 'HTML5', 'CSS3', 'PokeAPI'],
       image: pokewiki,
-      link: 'https://pokewikiapp.netlify.app'
-    }
+      link: 'https://pokewikiapp.netlify.app',
+    },
   ];
 
   return (
     <section className="bg-surface py-16 md:py-24" id="projects">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        
         {/* Header */}
         <div className="mb-12 md:mb-16 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
           <div className="lg:col-span-6">
@@ -178,7 +358,8 @@ const Projects = () => {
           </div>
           <div className="lg:col-span-6">
             <p className="font-body-lg text-body-md md:text-body-lg text-secondary leading-relaxed lg:text-right">
-              A collection of systems-level challenges solved through elegant backend engineering, robust API pipelines, and meticulous data validation.
+              A collection of systems-level challenges solved through elegant backend engineering,
+              robust API pipelines, and meticulous data validation.
             </p>
           </div>
         </div>
@@ -190,8 +371,8 @@ const Projects = () => {
             const isEven = index % 2 === 0;
 
             return (
-              <div 
-                key={project.id} 
+              <div
+                key={project.id}
                 className={`grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center border-b border-outline/10 pb-16 md:pb-20 last:border-0`}
               >
                 {/* Visual Diagram - Alternating order on desktop */}
@@ -202,7 +383,9 @@ const Projects = () => {
                 </div>
 
                 {/* Case Study Content */}
-                <div className={`lg:col-span-7 space-y-6 ${isEven ? 'lg:order-2 lg:pl-8' : 'lg:order-1 lg:pr-8'}`}>
+                <div
+                  className={`lg:col-span-7 space-y-6 ${isEven ? 'lg:order-2 lg:pl-8' : 'lg:order-1 lg:pr-8'}`}
+                >
                   <div className="flex items-center gap-4">
                     <span className="font-headline-sm text-lg text-primary font-bold">
                       Case Study {project.number}
@@ -224,8 +407,8 @@ const Projects = () => {
                   {/* Badges */}
                   <div className="flex flex-wrap gap-2 pt-2">
                     {project.tech.map((t, idx) => (
-                      <span 
-                        key={idx} 
+                      <span
+                        key={idx}
                         className="bg-surface-container text-primary font-label-md text-xs px-3 py-1.5 rounded-md font-medium"
                       >
                         {t}
@@ -239,7 +422,9 @@ const Projects = () => {
                       onClick={() => toggleProject(project.id)}
                       className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-5 py-2.5 font-label-md text-xs uppercase tracking-widest hover:bg-primary/5 transition-all rounded-lg"
                     >
-                      <span>{isExpanded ? 'Hide Engineering Specs' : 'View Engineering Specs'}</span>
+                      <span>
+                        {isExpanded ? 'Hide Engineering Specs' : 'View Engineering Specs'}
+                      </span>
                       <span className="material-symbols-outlined text-sm font-bold">
                         {isExpanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}
                       </span>
@@ -275,7 +460,6 @@ const Projects = () => {
                       </div>
                     </div>
                   )}
-
                 </div>
               </div>
             );
@@ -295,15 +479,15 @@ const Projects = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
             {personalProjects.map((p) => (
-              <div 
-                key={p.id} 
+              <div
+                key={p.id}
                 className="group bg-surface-container-low rounded-2xl border border-outline/10 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="aspect-[16/9] w-full overflow-hidden bg-surface-container-high border-b border-outline/10">
-                    <img 
-                      src={p.image} 
-                      alt={p.title} 
+                    <img
+                      src={p.image}
+                      alt={p.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
@@ -320,8 +504,8 @@ const Projects = () => {
                 <div className="p-6 pt-0 space-y-4">
                   <div className="flex flex-wrap gap-1.5">
                     {p.tech.map((t, idx) => (
-                      <span 
-                        key={idx} 
+                      <span
+                        key={idx}
                         className="bg-surface px-2.5 py-1 rounded text-xs text-secondary font-label-md border border-outline/5"
                       >
                         {t}
@@ -329,9 +513,9 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <a 
-                    href={p.link} 
-                    target="_blank" 
+                  <a
+                    href={p.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 text-primary font-label-md text-xs uppercase tracking-widest font-bold group/btn pt-2 hover:opacity-80 transition-opacity"
                   >
@@ -345,7 +529,6 @@ const Projects = () => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

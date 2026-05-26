@@ -9,20 +9,28 @@ const About = () => {
               Professional Profile
             </span>
             <h2 className="font-headline-md text-3xl md:text-headline-md text-on-surface leading-tight">
-              A computer engineer who designs for <span className="italic text-primary font-medium">stability</span> and builds for scale.
+              A computer engineer who designs for{' '}
+              <span className="italic text-primary font-medium">stability</span> and builds for
+              scale.
             </h2>
           </div>
-          
+
           {/* Right Column - Narrative */}
           <div className="lg:col-span-7 font-body-lg text-body-md md:text-body-lg text-secondary space-y-6 leading-relaxed">
             <p>
-              I am a Computer Engineer with a deep passion for full-stack web development. I thrive on translating complex business requirements into elegant, high-performance digital systems.
+              I am a Computer Engineer with a deep passion for full-stack web development. I thrive
+              on translating complex business requirements into elegant, high-performance digital
+              systems.
             </p>
             <p>
-              My engineering approach is uniquely shaped by my background in Quality Assurance. I don't just write software that works; I design it to withstand edge cases, high concurrency, and unexpected conditions. This dual perspective allows me to bridge the gap between fast feature delivery and rigorous operational stability.
+              My engineering approach is uniquely shaped by my background in Quality Assurance. I
+              don't just write software that works; I design it to withstand edge cases, high
+              concurrency, and unexpected conditions. This dual perspective allows me to bridge the
+              gap between fast feature delivery and rigorous operational stability.
             </p>
             <p>
-              Always eager to embrace new challenges, I view technical hurdles not as roadblocks, but as opportunities to learn, optimize, and grow both personally and professionally.
+              I thrive on tackling complex technical challenges, consistently leveraging them to
+              optimize system performance and expand my engineering capabilities.
             </p>
           </div>
         </div>
