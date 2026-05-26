@@ -93,7 +93,7 @@ const Resume = () => {
                     </div>
                   </div>
                   <a
-                    href="https://drive.google.com/file/d/1OcA_yAQcf28qbQaJ2RREURyepvVy4xK9/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1wFoyOVi_QzhVNHnL4fDBecnMh0eKppyn/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-surface text-primary border border-outline/15 hover:bg-primary hover:text-white rounded-lg transition-all"
@@ -119,7 +119,7 @@ const Resume = () => {
                     </div>
                   </div>
                   <a
-                    href="https://drive.google.com/file/d/1GdJwbnW8YUyMrNg8WM9C53raKkyMyqaj/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1TyWSNuit12xp8HG8zIN_2SwsM8O17FaY/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-surface text-primary border border-outline/15 hover:bg-primary hover:text-white rounded-lg transition-all"
