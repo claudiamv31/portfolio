@@ -56,7 +56,10 @@ const MainNavigation = () => {
             Contact
           </a>
         </div>
-        <button className="bg-primary text-on-primary px-6 py-3 font-label-md text-label-md uppercase tracking-widest hover:opacity-80 transition-opacity">
+        <button
+          className="bg-primary text-on-primary px-6 py-3 font-label-md text-label-md uppercase tracking-widest hover:opacity-80 transition-opacity"
+          onClick={() => (window.location.href = '#contact')}
+        >
           Contact Me
         </button>
       </nav>
