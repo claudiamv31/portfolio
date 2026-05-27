@@ -37,7 +37,7 @@ const Contact = () => {
                 Send Email
               </a>
               <a
-                href="https://drive.google.com/file/d/1OcA_yAQcf28qbQaJ2RREURyepvVy4xK9/view?usp=sharing"
+                href="https://drive.google.com/file/d/1wFoyOVi_QzhVNHnL4fDBecnMh0eKppyn/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center border border-white/40 hover:border-white text-white hover:bg-white/10 px-8 py-4 font-label-md text-label-md uppercase tracking-widest transition-all rounded-lg"
