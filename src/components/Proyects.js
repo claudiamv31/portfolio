@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import clavtvImg from '../assets/clavtv.png';
+import dianaflow from '../assets/dianaflow.png';
 import pokewiki from '../assets/pokewiki.png';
 
 const Projects = () => {
@@ -340,6 +341,15 @@ const Projects = () => {
       tech: ['React', 'JavaScript', 'HTML5', 'CSS3', 'PokeAPI'],
       image: pokewiki,
       link: 'https://pokewikiapp.netlify.app',
+    },
+    {
+      id: 'dianaflow',
+      title: 'DianaFlow Wellness Tracker',
+      description:
+        'A personal cycle tracking web app with secure authentication, onboarding, calendar logging, statistics, archive history, and profile management.',
+      tech: ['React', 'JavaScript', 'HTML5', 'CSS3', 'React Calendar'],
+      image: dianaflow,
+      link: 'https://dianaflow.netlify.app',
     },
   ];
 
