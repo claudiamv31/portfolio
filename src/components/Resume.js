@@ -11,13 +11,14 @@ const Resume = () => {
       ],
     },
     {
-      role: 'QA Automation Engineer',
-      company: 'Software Quality Systems',
-      period: 'Prior Experience',
+      role: 'Junior QA Tester',
+      company: 'Exito Software',
+      period: 'Mar 2022 - Aug 2022',
       details: [
-        'Wrote robust end-to-end automated scripts utilizing frameworks like Playwright and Selenium to ensure release stability.',
-        'Validated RESTful interfaces with comprehensive Postman assertion runs, asserting status codes, body payloads, and security states.',
-        'Analyzed core application logic to map test matrices, executing complete regression cycles and reducing release hotfixes.',
+        'Designed and executed manual test cases for web and desktop applications across functional, regression, bug-fix, and release validation scenarios.',
+        'Developed automated end-to-end scripts with JavaScript, TestCafe, and Selenium to validate repetitive workflows and improve regression consistency.',
+        'Tested APIs and critical business flows, creating defect reports with reproduction steps, evidence, severity, expected results, and actual results.',
+        'Supported load/performance validation with scripted user-flow scenarios and re-tested bug fixes before release to reduce regressions.',
       ],
     },
   ];

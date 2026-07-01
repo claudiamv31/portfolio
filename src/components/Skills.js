@@ -36,8 +36,8 @@ const Skills = () => {
       id: 'qa',
       label: 'Quality Assurance',
       icon: 'fact_check',
-      description: 'My native advantage. I design comprehensive test plans, write end-to-end regression scripts, and perform rigorous validation.',
-      skills: ['Automated Scripts', 'API Testing', 'Regression Testing', 'Manual Testing']
+      description: 'My native advantage. I design manual test cases, write JavaScript end-to-end scripts, validate APIs, and re-test bug fixes before release.',
+      skills: ['JavaScript Automation', 'TestCafe', 'Selenium', 'API Testing', 'Regression Testing', 'Manual Testing']
     }
   ];
 
