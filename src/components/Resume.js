@@ -3,7 +3,7 @@ const Resume = () => {
     {
       role: 'Full Stack Software Developer',
       company: 'Enterprise Solutions',
-      period: 'Dec 2024 - Present',
+      period: 'July 2023 - Present',
       details: [
         'Build and maintain scalable web-based portals utilizing .NET Core backend APIs and React frontend components.',
         'Optimize relational databases (SQL Server, MySQL) by restructuring schemas and indexes to handle calculation-heavy payroll systems.',
@@ -13,7 +13,7 @@ const Resume = () => {
     {
       role: 'Junior QA Tester',
       company: 'Exito Software',
-      period: 'Mar 2022 - Aug 2022',
+      period: 'Mar 2022 - July 2023',
       details: [
         'Designed and executed manual test cases for web and desktop applications across functional, regression, bug-fix, and release validation scenarios.',
         'Developed automated end-to-end scripts with JavaScript, TestCafe, and Selenium to validate repetitive workflows and improve regression consistency.',
